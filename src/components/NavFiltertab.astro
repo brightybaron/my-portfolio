@@ -1,0 +1,119 @@
+---
+import NavFilter from "./NavFilter";
+
+const contents = (await import("../../public/data/content.json")).default;
+---
+
+<section class="mt-8">
+  <!-- Nav -->
+  <div class="button-group flex flex-row gap-2 w-full flex-wrap" id="nav-tab">
+    <NavFilter client:load />
+  </div>
+  <div class="mt-4 min-h-[250px]">
+    <div class="konten mt-4">
+      {
+        contents.map((content) => (
+          <>
+            <div
+              class={`nav-content ${content.category} relative float-left w-[calc(1/2*100%-1.2rem)] sm:w-[calc(1/4*100%-1.2rem)] h-auto m-1 cursor-pointer overflow-hidden rounded-md`}
+              data-category={content.category}
+            >
+              <>
+                <a
+                  class="w-full h-full relative flex flex-wrap overflow-hidden transition-all justify-center items-center aspect-square hover:scale-[1.03] rounded-md border-b"
+                  href={content.link}
+                >
+                  {content.images.map((imgSrc) => (
+                    <div class="grow shrink basis-auto w-1/2 aspect-square">
+                      <img
+                        src={imgSrc}
+                        alt={imgSrc + "foto"}
+                        class="w-full h-full object-cover transition-all p-px rounded-md"
+                      />
+                    </div>
+                  ))}
+                </a>
+                <>
+                  <div class="bg-white/30 w-full pl-px pt-1 flex justify-evenly">
+                    <p class="text-gray-400">update on</p>
+                    <p
+                      class:list={[
+                        "text-end capitalize text-gray-900 px-1",
+                        { "bg-teal-200": content.category.includes("photos") },
+                        { "bg-indigo-200": content.category.includes("posts") },
+                        {
+                          "bg-orange-200":
+                            content.category.includes("projects"),
+                        },
+                      ]}
+                    >
+                      {content.category}
+                    </p>
+                  </div>
+                </>
+                <p class="font-semibold mb-2 text-base underline text-center">
+                  {content.title}
+                </p>
+              </>
+            </div>
+          </>
+        ))
+      }
+    </div>
+  </div>
+</section>
+
+<style>
+  .button-group button {
+    color: brown;
+  }
+
+  .tab-pane {
+    display: none;
+  }
+
+  .tab-pane.active {
+    display: block;
+  }
+</style>
+
+<script>
+  // init Isotope
+  import Isotope from "isotope-layout";
+  const iso = new Isotope(".konten", {
+    itemSelector: ".nav-content",
+    masonry: {
+      columnWidth: "",
+    },
+  });
+
+  var filtersElem = document.querySelector(".button-group");
+  filtersElem.addEventListener("click", function (event) {
+    // only work with buttons
+    if (!(event.target as Element).matches("button")) {
+      return;
+    }
+    var filterValue = (event.target as HTMLElement).getAttribute("data-filter");
+    // use matching filter function
+    // filterValue = filterFns[filterValue] || filterValue;
+    iso.arrange({ filter: filterValue });
+  });
+
+  // change is-checked class on buttons
+  var buttonGroups = document.querySelectorAll(".button-group");
+  for (var i = 0, len = buttonGroups.length; i < len; i++) {
+    var buttonGroup = buttonGroups[i];
+    radioButtonGroup(buttonGroup);
+  }
+
+  function radioButtonGroup(buttonGroup) {
+    buttonGroup.addEventListener("click", function (event) {
+      // only work with buttons
+      if (!(event.target as Element).matches("button")) {
+        return;
+      }
+      buttonGroup.querySelector(".is-checked").classList.remove("is-checked");
+      event.target.classList.add("is-checked");
+    });
+  }
+</script>

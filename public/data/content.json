@@ -1,0 +1,31 @@
+[
+  {
+    "title": "Bromo Adventure",
+    "category": "photos",
+    "link": "/photo/bromo",
+    "images": [
+      "/img/bromo4.jpg",
+      "/img/bromo3.jpg",
+      "/img/bromo2.jpg",
+      "/img/bromo1.jpg"
+    ]
+  },
+  {
+    "title": "Bromo Adventure",
+    "category": "photos",
+    "link": "/photo/bromo",
+    "images": ["/img/bromo4.jpg", "/img/bromo3.jpg", "/img/bromo1.jpg"]
+  },
+  {
+    "title": "Bromo Adventure",
+    "category": "posts",
+    "link": "/photo/bromo",
+    "images": ["/img/bromo4.jpg", "/img/bromo1.jpg"]
+  },
+  {
+    "title": "Bromo Adventure",
+    "category": "projects",
+    "link": "/photo/bromo",
+    "images": ["/img/bromo4.jpg"]
+  }
+]

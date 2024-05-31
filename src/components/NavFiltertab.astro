@@ -21,13 +21,13 @@ const contents = (await import("../../public/data/content.json")).default;
               <>
                 <a
                   class="w-full h-full relative flex flex-wrap overflow-hidden transition-all justify-center items-center aspect-square hover:scale-[1.03] rounded-md border-b"
-                  href={content.link}
+                  href={"/my-portfolio" + content.link}
                 >
                   {content.images.map((imgSrc) => (
                     <div class="grow shrink basis-auto w-1/2 aspect-square">
                       <img
-                        src={imgSrc}
-                        alt={imgSrc + "foto"}
+                        src={"/my-portfolio" + imgSrc}
+                        alt={"/my-portfolio" + imgSrc + "foto"}
                         class="w-full h-full object-cover transition-all p-px rounded-md"
                       />
                     </div>

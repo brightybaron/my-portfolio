@@ -2,30 +2,99 @@
   {
     "title": "Bromo Adventure",
     "category": "photos",
-    "link": "/photo/bromo",
+    "link": "/my-portfolio/photos/bromo",
     "images": [
-      "/img/bromo4.jpg",
-      "/img/bromo3.jpg",
-      "/img/bromo2.jpg",
-      "/img/bromo1.jpg"
+      {
+        "src": "/my-portfolio/img/bromo4.jpg",
+        "speed": "1/200",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6400"
+      },
+      {
+        "src": "/my-portfolio/img/bromo3.jpg",
+        "speed": "1/125",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6400"
+      },
+      {
+        "src": "/my-portfolio/img/bromo2.jpg",
+        "speed": "1/250",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6400"
+      },
+      {
+        "src": "/my-portfolio/img/bromo1.jpg",
+        "speed": "1/400",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6400"
+      }
     ]
   },
   {
     "title": "Bromo Adventure",
     "category": "photos",
-    "link": "/photo/bromo",
-    "images": ["/img/bromo4.jpg", "/img/bromo3.jpg", "/img/bromo1.jpg"]
+    "link": "/my-portfolio/photos/bromo",
+    "images": [
+      {
+        "src": "/my-portfolio/img/bromo4.jpg",
+        "speed": "200",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6000"
+      },
+      {
+        "src": "/my-portfolio/img/bromo2.jpg",
+        "speed": "200",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6000"
+      },
+      {
+        "src": "/my-portfolio/img/bromo1.jpg",
+        "speed": "200",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6000"
+      }
+    ]
   },
   {
     "title": "Bromo Adventure",
     "category": "posts",
-    "link": "/photo/bromo",
-    "images": ["/img/bromo4.jpg", "/img/bromo1.jpg"]
+    "link": "/my-portfolio/photos/bromo",
+    "images": [
+      {
+        "src": "/my-portfolio/img/bromo4.jpg",
+        "speed": "200",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6000"
+      },
+      {
+        "src": "/my-portfolio/img/bromo2.jpg",
+        "speed": "200",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6000"
+      }
+    ]
   },
   {
     "title": "Bromo Adventure",
     "category": "projects",
-    "link": "/photo/bromo",
-    "images": ["/img/bromo4.jpg"]
+    "link": "/my-portfolio/photos/bromo",
+    "images": [
+      {
+        "src": "/my-portfolio/img/bromo4.jpg",
+        "speed": "200",
+        "aperture": "6.50",
+        "iso": "800",
+        "camera": "ILCE-6000"
+      }
+    ]
   }
 ]

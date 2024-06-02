@@ -2,8 +2,18 @@
 import MainLayout from "../../layouts/MainLayout.astro";
 import ImageSlider from "../../components/Slider";
 
-const images = (await import("../../../public/data/content.json")).default[0]
-  .images;
+// from SUPABASE
+// const response = await fetch("http://localhost:5432");
+// const data = await response.json();
+// console.log(data);
+
+// const images = data.dbPortofolio.data[0].images;
+// const content = data.dbPortofolio.data[0];
+
+// local json
+const data = (await import("../../../public/data/content.json")).default[0];
+const images = data.images;
+const content = data;
 ---
 
 <MainLayout>
@@ -12,20 +22,17 @@ const images = (await import("../../../public/data/content.json")).default[0]
     <div class="flex justify-between">
       <div class="flex-1">
         <small class="text-gray-500 block text-xs">Published at</small>
-        <p class="text-gray-700 font-medium">April 28, 2023</p>
+        <p class="text-gray-700 font-medium">{content.created_at}</p>
       </div>
       <div class="flex-1">
         <small class="text-gray-500 block text-xs">Location</small>
-        <p class="text-gray-700 font-medium">Bromo, East Java</p>
+        <p class="text-gray-700 font-medium">{content.location}</p>
       </div>
     </div>
     <div class="mt-6 w-full sm:w-3/4">
-      <h1 class="font-semibold text-base mb-4">Lorem, ipsum dolor.</h1>
+      <h1 class="font-semibold text-base mb-4">{content.title}</h1>
       <p>
-        Lorem ipsum dolor sit amet consectetur adipisicing elit. Sunt, eaque
-        cupiditate beatae alias explicabo at, deserunt debitis voluptatibus
-        laudantium nemo soluta maiores illo. Eligendi, tenetur? Quas aliquid
-        adipisci saepe sequi consectetur illo quam ullam! Quod, quidem.
+        {content.description}
       </p>
     </div>
   </section>

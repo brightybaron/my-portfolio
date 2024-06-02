@@ -2,6 +2,9 @@
   {
     "title": "Bromo Adventure",
     "category": "photos",
+    "description": "Bromo Adventure",
+    "location": "Bromo, East Java",
+    "created_at": "28-04-2024",
     "link": "/my-portfolio/photos/bromo",
     "images": [
       {

@@ -1,102 +1,118 @@
 [
   {
+    "id": 1,
     "title": "Bromo Adventure",
     "category": "photos",
-    "description": "Bromo Adventure",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Neque hic consequuntur, atque natus saepe, minus voluptatibus voluptatem eaque possimus veniam mollitia, sunt officia aliquid.",
     "location": "Bromo, East Java",
-    "created_at": "28-04-2024",
-    "link": "/my-portfolio/photos/bromo",
+    "created_at": "2024-6-04",
+    "link": "/photos/bromo",
     "images": [
       {
+        "iso": "800",
         "src": "/my-portfolio/img/bromo4.jpg",
         "speed": "1/200",
-        "aperture": "6.50",
-        "iso": "800",
-        "camera": "ILCE-6400"
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
       },
       {
+        "iso": "800",
         "src": "/my-portfolio/img/bromo3.jpg",
         "speed": "1/125",
-        "aperture": "6.50",
-        "iso": "800",
-        "camera": "ILCE-6400"
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
       },
       {
+        "iso": "800",
         "src": "/my-portfolio/img/bromo2.jpg",
         "speed": "1/250",
-        "aperture": "6.50",
-        "iso": "800",
-        "camera": "ILCE-6400"
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
       },
       {
+        "iso": "800",
         "src": "/my-portfolio/img/bromo1.jpg",
         "speed": "1/400",
-        "aperture": "6.50",
-        "iso": "800",
-        "camera": "ILCE-6400"
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
       }
     ]
   },
   {
-    "title": "Bromo Adventure",
+    "id": 2,
+    "title": "Kawah Ijen",
     "category": "photos",
-    "link": "/my-portfolio/photos/bromo",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste cumque quod cupiditate eius enim! Veniam voluptate commodi porro ducimus fuga debitis necessitatibus, culpa aliquam sapiente ullam? Magnam magni nostrum nihil.",
+    "location": "Banyuwangi, East Java",
+    "created_at": "2024-6-05",
+    "link": "/photos/ijen",
     "images": [
       {
-        "src": "/my-portfolio/img/bromo4.jpg",
-        "speed": "200",
-        "aperture": "6.50",
         "iso": "800",
-        "camera": "ILCE-6000"
+        "src": "/my-portfolio/img/ijen1.jpg",
+        "speed": "1/200",
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
       },
       {
-        "src": "/my-portfolio/img/bromo2.jpg",
-        "speed": "200",
-        "aperture": "6.50",
         "iso": "800",
-        "camera": "ILCE-6000"
+        "src": "/my-portfolio/img/dieng2.JPG",
+        "speed": "1/125",
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
       },
       {
+        "iso": "800",
+        "src": "/my-portfolio/img/baluran.jpg",
+        "speed": "1/250",
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
+      },
+      {
+        "iso": "800",
+        "src": "/my-portfolio/img/tumpaksewu.jpg",
+        "speed": "1/400",
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "title": "Tumpak Sewu",
+    "category": "photos",
+    "description": "Lorem ipsum dolor sit, amet consectetur adipisicing elit. Iste! Veniam voluptate commodi porro ducimus fuga debitis necessitatibus, culpa aliquam sapiente ullam? Magnam magni nostrum nihil.",
+    "location": "Lumajang, East Java",
+    "created_at": "2024-6-06",
+    "link": "/photos/tumpaksewu",
+    "images": [
+      {
+        "iso": "800",
+        "src": "/my-portfolio/img/tumpaksewu.jpg",
+        "speed": "1/200",
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
+      },
+      {
+        "iso": "800",
         "src": "/my-portfolio/img/bromo1.jpg",
-        "speed": "200",
-        "aperture": "6.50",
-        "iso": "800",
-        "camera": "ILCE-6000"
-      }
-    ]
-  },
-  {
-    "title": "Bromo Adventure",
-    "category": "posts",
-    "link": "/my-portfolio/photos/bromo",
-    "images": [
-      {
-        "src": "/my-portfolio/img/bromo4.jpg",
-        "speed": "200",
-        "aperture": "6.50",
-        "iso": "800",
-        "camera": "ILCE-6000"
+        "speed": "1/125",
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
       },
       {
-        "src": "/my-portfolio/img/bromo2.jpg",
-        "speed": "200",
-        "aperture": "6.50",
         "iso": "800",
-        "camera": "ILCE-6000"
-      }
-    ]
-  },
-  {
-    "title": "Bromo Adventure",
-    "category": "projects",
-    "link": "/my-portfolio/photos/bromo",
-    "images": [
+        "src": "/my-portfolio/img/dieng2.JPG",
+        "speed": "1/250",
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
+      },
       {
-        "src": "/my-portfolio/img/bromo4.jpg",
-        "speed": "200",
-        "aperture": "6.50",
         "iso": "800",
-        "camera": "ILCE-6000"
+        "src": "/my-portfolio/img/ijen1.jpg",
+        "speed": "1/400",
+        "camera": "ILCE-6400",
+        "aperture": "6.50"
       }
     ]
   }

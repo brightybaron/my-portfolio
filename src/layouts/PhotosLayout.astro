@@ -1,0 +1,53 @@
+---
+import MainLayout from "../layouts/MainLayout.astro";
+import ImageSlider from "../components/Slider";
+
+const { index } = Astro.props;
+interface Props {
+  index: number;
+}
+
+// // from SUPABASE
+// const response = await fetch("http://localhost:5432");
+// const data = await response.json();
+// console.log(data);
+
+// const content = data.dbPortfolio.data[`${index}`];
+// const images = data.dbPortfolio.data[`${index}`].images;
+
+// local json
+const data = (await import("../../public/data/content.json")).default[
+  `${index}`
+];
+const images = data.images;
+const content = data;
+---
+
+<MainLayout>
+  <ImageSlider client:load images={images ? images : ""} />
+  <section class="mt-4">
+    <div class="flex justify-between">
+      <div class="flex-1">
+        <small class="text-gray-500 block text-xs">Published at</small>
+        <p class="text-gray-700 font-medium">
+          {
+            new Date(content.created_at).toLocaleDateString("en-US", {
+              month: "long",
+              day: "numeric",
+              year: "numeric",
+            })
+          }
+        </p>
+      </div>
+      <div class="flex-1">
+        <small class="text-gray-500 block text-xs">Location</small>
+        <p class="text-gray-700 font-medium">{content.location}</p>
+      </div>
+    </div>
+    <div class="mt-6 w-full sm:w-3/4">
+      <h1 class="font-semibold text-base mb-4">{content.title}</h1>
+      <p>{content.description}</p>
+    </div>
+  </section>
+</MainLayout>;
+

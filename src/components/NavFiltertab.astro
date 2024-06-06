@@ -1,7 +1,15 @@
 ---
 import NavFilter from "./NavFilter";
 
-const contents = (await import("../../public/data/content.json")).default;
+// from SUPABASE
+// const response = await fetch("http://localhost:5432");
+// const data = await response.json();
+
+// const contents = data.dbPortfolio.data;
+
+const data = (await import("../../public/data/content.json")).default;
+const contents = data;
+// contents.sort((a, b) => b.id - a.id);
 ---
 
 <section class="mt-8">
@@ -21,7 +29,7 @@ const contents = (await import("../../public/data/content.json")).default;
               <>
                 <a
                   class="w-full h-full relative flex flex-wrap overflow-hidden transition-all justify-center items-center aspect-square hover:scale-[1.03] rounded-md border-b"
-                  href={content.link}
+                  href={"/my-portfolio" + content.link}
                 >
                   {content.images.map((image) => (
                     <div class="grow shrink basis-auto w-1/2 aspect-square">
@@ -35,7 +43,16 @@ const contents = (await import("../../public/data/content.json")).default;
                 </a>
                 <>
                   <div class="bg-white/30 w-full pl-px pt-1 flex justify-evenly">
-                    <p class="text-gray-400">update on</p>
+                    <p class="text-gray-400">
+                      {new Date(content.created_at).toLocaleDateString(
+                        "en-US",
+                        {
+                          month: "long",
+                          day: "numeric",
+                          year: "numeric",
+                        }
+                      )}
+                    </p>
                     <p
                       class:list={[
                         "text-end capitalize text-gray-900 px-1",

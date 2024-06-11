@@ -8,20 +8,18 @@ interface Props {
 }
 
 // // from SUPABASE
-const response = await fetch("http://localhost:5432");
-const data = await response.json();
+// const response = await fetch("http://localhost:5432");
+// const data = await response.json();
 // console.log(data);
 
-const content = data.dbPortfolio.data[`${index}`];
-const images = data.dbPortfolio.data[`${index}`].images;
+// const content = data.dbPortfolio.data[`${index}`];
+// const images = data.dbPortfolio.data[`${index}`].images;
 // const images = data.bromoImages;
 
 // local json
-// const data = (await import("../../public/data/content.json")).default[
-// `${index}`
-// ];
-// const images = data.images;
-// const content = data;
+const data = (await import("../data/content.json")).default[0];
+const images = data.images;
+const content = data;
 ---
 
 <MainLayout>

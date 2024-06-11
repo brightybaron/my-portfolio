@@ -16,7 +16,7 @@ function NavFilter() {
         <button
           key={index}
           id={tab + "-tab"}
-          className={`tab-button capitalize ${
+          className={`tab-button capitalize text-xs ${
             activeTab === index ? "text-gray-900" : " text-gray-400"
           }`}
           onClick={() => handleClick(index)}

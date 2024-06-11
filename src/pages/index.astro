@@ -3,7 +3,7 @@ import MainLayout from "../layouts/MainLayout.astro";
 import NavFilter from "../components/NavFilter";
 import Content from "../components/Content";
 
-const data = (await import("../../public/data/content.json")).default;
+const data = (await import("../data/content.json")).default;
 ---
 
 <MainLayout>
@@ -29,7 +29,7 @@ const data = (await import("../../public/data/content.json")).default;
       <section class="mt-8">
         <!-- Nav -->
         <div
-          class="button-group flex flex-row gap-2 w-full flex-wrap"
+          class="button-group flex flex-row gap-4 w-full flex-wrap"
           id="nav-tab"
         >
           <NavFilter client:load />
